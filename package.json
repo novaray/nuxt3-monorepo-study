@@ -1,0 +1,16 @@
+{
+  "name": "nuxt3-monorepo-study",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "packages": "dotenv -- pnpm --filter",
+    "app": "pnpm packages @nuxt3-monorepo-study/app",
+    "dev": "dotenv -- pnpm -r dev",
+    "build": "dotenv -- pnpm -r build"
+  },
+  "author": "skkim",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0"
+  }
+}
