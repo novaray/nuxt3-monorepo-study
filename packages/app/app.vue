@@ -5,6 +5,7 @@ const config = useRuntimeConfig();
 <template>
   <div>
     <UiTheMessage />
-    {{config.public.publicApiBase}}
+    <UiTestQuasarButton />
+    {{ config.public.publicApiBase }}
   </div>
 </template>
