@@ -1,0 +1,13 @@
+{
+  "arrowSpacing": [ "error", { "before": true, "after": true } ],
+  "singleQuote": true,
+  "semi": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "printWidth": 120,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "singleAttributePerLine": true
+}
