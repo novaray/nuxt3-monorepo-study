@@ -1,5 +1,6 @@
 # nuxt3-monorepo-study
 Nuxt3 프레임워크에 대한 Monorepo 구조를 공부하는 저장소.  
+ui폴더에는 storybook에 대해서도 탐구해본다.  
 패키지매니저는 `pnpm`을 사용한다.
 
 ```bash
