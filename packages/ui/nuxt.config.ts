@@ -4,7 +4,7 @@ const { resolve } = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['nuxt-quasar-ui', 'storybook-addon-nuxt'],
+  modules: ['nuxt-quasar-ui'],
   alias: { '~ui': resolve('./') },
   components: [{ path: '~ui/components', prefix: 'Ui' }]
 });

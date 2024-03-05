@@ -31,3 +31,22 @@ Nuxt3에서는 layer 기능을 제공해서 모노레포를 구축할 때 편의
 
 혹시 순서가 꼬였나 싶어서 그 전에 각각 패키지에서 설치한 `node_modules`폴더를 전부 지우고,  
 `ui`설치 후, `app`을 설치하고 루트 디렉토리에서 `pnpm -r dev`명령어를 실행하니 해결되었다.
+
+### storybook error
+`ui`패키지에 storybook을 설치하고, addon까지 설치했다.
+```bash
+pnpm dlx storybook@latest init
+```
+```bash
+pnpm add -D storybook-addon-nuxt 
+```
+
+그 후에 `.storybook/main.js`에 addon을 추가하고 실행했더니 다음과 같은 에러가 발생했다.
+-  SyntaxError: Cannot use import statement outside a module
+  - import { fileURLToPath } from 'node:url';
+
+당황스러웠지만,  
+찾아보니 설치된 외부라이브러리인 `storybook-addon-nuxt`폴더의 `package.json`에 `"type": "module"`을 추가하라는 글을 찾아볼 수 있었다.
+- https://github.com/hirotaka/storybook-addon-nuxt/issues/24
+
+진짜로 `node_modules`폴더에 해당 내용을 추가하니 해결되었다.
