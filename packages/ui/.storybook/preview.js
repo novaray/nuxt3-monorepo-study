@@ -1,3 +1,11 @@
+import { setup } from '@storybook/vue3';
+import { Quasar } from 'quasar';
+
+setup((app) => {
+  // Registers your app's plugins into Storybook
+  app.use(Quasar, {});
+});
+
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {
   parameters: {
