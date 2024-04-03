@@ -1,6 +1,8 @@
 import { setup } from '@storybook/vue3';
 import { Quasar } from 'quasar';
 
+import 'quasar/dist/quasar.css';
+
 setup((app) => {
   // Registers your app's plugins into Storybook
   app.use(Quasar, {});

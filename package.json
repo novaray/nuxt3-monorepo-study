@@ -9,7 +9,7 @@
     "build": "dotenv -- pnpm -r build"
   },
   "author": "skkim",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
