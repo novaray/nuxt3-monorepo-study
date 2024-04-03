@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import TestQuasarButton from '~/components/TestQuasarButton.vue';
+import TestQuasarButton from '~/components/base/TestQuasarButton.vue';
 
 const meta: Meta<typeof TestQuasarButton> = {
   component: TestQuasarButton
