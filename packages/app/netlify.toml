@@ -2,4 +2,5 @@
   NODE_VERSION = "20"
   NPM_FLAGS = "--version" # prevent Netlify npm install
 [build]
+  publish = "./app/dist"
   command = "npx pnpm i --store=node_modules/.pnpm-store --frozen-lockfile && npx pnpm run build"
