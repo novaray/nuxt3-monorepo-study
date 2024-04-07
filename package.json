@@ -6,8 +6,14 @@
     "packages": "dotenv -- pnpm --filter",
     "app": "pnpm packages @nuxt3-monorepo-study/app",
     "dev": "dotenv -- pnpm -r dev",
-    "build": "dotenv -- pnpm -r build"
+    "build": "dotenv -- pnpm -r build",
+    "build:app": "pnpm --dir packages/app build",
+    "build:ui": "pnpm --dir packages/ui build"
   },
+  "workspaces": [
+    "app/**",
+    "packages/*"
+  ],
   "author": "skkim",
   "license": "MIT",
   "devDependencies": {

@@ -6,6 +6,7 @@
     "build": "nuxi build",
     "dev": "nuxi dev",
     "generate": "nuxi generate",
+    "build:ci": "pnpm run -w build:ui && nuxi build",
     "preview": "nuxi preview",
     "postinstall": "nuxi prepare"
   },
