@@ -20,6 +20,25 @@ Nuxt3에서는 layer 기능을 제공해서 모노레포를 구축할 때 편의
 `app` 폴더에는 실질적으로 화면에 Nuxt3앱이고 도메인이라고 보면된다.  
 `ui` 폴더에는 공통적으로 쓰이는 base 컴포넌트들을 구성하기로 했다.
 
+## 배포
+Netlify에 배포할 때 `app` 폴더에 있는 Nuxt App을 배포한다.  
+문서를 찾아보니 배포할 패키지에 `netlify.toml`파일을 만들어야 한다고 한다.  
+그리고, pnpm을 사용해서 배포를 해야하므로 관련 문서도 확인했다.
+
+> https://www.netlify.com/blog/how-to-use-pnpm-with-netlify-build/  
+> https://docs.netlify.com/configure-builds/monorepos/#example-monorepo-setup
+
+`netlify.toml`파일의 `publish`를 어떻게 잡아야할까 고민하다가,  
+처음엔, `dist`, `./dist`이런 식으로 `app`폴더 기준으로 잡았는데, 배포하는데 실패가 계속 되었다.  
+
+그래서,  
+`publish`를 빼버리고 netlify에서 배포할 때 어떻게 잡나 봤더니 전체 경로인 `packages/app/dist`로 잡아주길래 해당값을 주고 배포하니 성공했다.
+
+현재 배포한 것은,  
+ui 패키지의 quasar 프레임워크로 버튼과 메시지에 대해서 출력만 해주는 모노레포 배포 테스트용 페이지이다.
+
+> https://strong-piroshki-b2f8ca.netlify.app/
+
 ## 트러블 슈팅
 ### recursive unknown error
 위의 구조 잡을 떄 참조한 링크를 보면,  
